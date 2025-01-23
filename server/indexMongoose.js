@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 // import { fileURLToPath } from "url";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import cors from "cors";
 
 import route from "./routes/doctorRoute.js";
 
@@ -12,6 +13,7 @@ dotenv.config();
 const app=express();
 const PORT = process.env.PORT;
 const URL = process.env.MONGODB_URL;
+app.use(cors());
 
 
 app.use(bodyParser.json());

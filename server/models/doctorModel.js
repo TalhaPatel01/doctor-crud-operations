@@ -6,6 +6,10 @@ const doctorSchema = new mongoose.Schema(
             type:String,
             required:true
         },
+        password:{
+            type:String,
+            required:true
+        },
         specialization:{
             type:String,
             required:true
@@ -21,6 +25,10 @@ const doctorSchema = new mongoose.Schema(
         hospital_name:{
             type:String,
             required:true
+        },
+        token:{
+            type:String,
+            default:""
         }
     },{
         timestamps:true
